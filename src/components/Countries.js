@@ -17,6 +17,20 @@ const Countries = () => {
   }, []);
   return (
     <div className="countries">
+      <a href="whatsapp://send?text=https://github.com/Seutchou">
+        Share my Github on Whatsapp
+      </a>
+
+      <input
+        type="button"
+        value="Share my Github on Telegram"
+        onClick={(e) => {
+          e.preventDefault();
+          window.location.href =
+            "https://t.me/share/url?url={https://github.com/Seutchou}&text={View more of my projects on Github}";
+        }}
+      />
+
       <ul className="radio-container">
         <input
           type="range"
